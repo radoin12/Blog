@@ -1,0 +1,16 @@
+
+
+.Menu{
+    border:2px solid blue;
+    padding: 30px;
+    .content{
+ 
+      .posts{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+
+    }
+} 

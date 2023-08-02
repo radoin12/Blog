@@ -1,0 +1,35 @@
+
+.errorText{
+    color:red;
+    font-weight: 200;
+    font-size: 22px ;
+    padding: 10px 0;
+    text-align: center;
+}
+.successText{
+    color:green;
+    font-weight: 200;
+    font-size: 22px ;
+    padding: 10px 0;
+    text-align: center;  
+}
+.loginPage{
+    color:blue ;
+    font-size: 20px ;
+    font-weight: bold;
+}
+.file{
+    border-bottom: 2px solid ;
+    width: 300px ;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.file .uploadImage{
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    padding-bottom: 5px;
+}

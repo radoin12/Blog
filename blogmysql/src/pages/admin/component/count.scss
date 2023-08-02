@@ -1,0 +1,23 @@
+
+
+
+.styleCount{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(67, 78, 74, 0.47);
+    padding: 15px;
+     flex:3;
+     
+
+    h2{
+        font-weight: bold;
+        font-size: 22px;
+        color: rgb(160, 160, 160);
+    }
+    p{
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
