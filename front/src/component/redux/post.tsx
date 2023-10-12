@@ -88,7 +88,7 @@ export const NewPostBlog=createAsyncThunk('post/NewPostBlog',async(payloadData:P
   }
 })
 //   display all posts
-export const DisplayPost=createAsyncThunk('post/DisplayPost',async(val:any,ThunkApi)=>{
+export const DisplayPost=createAsyncThunk('post/DisplayPost',async(val:string,ThunkApi)=>{
     const{rejectWithValue}=ThunkApi
    
  
@@ -375,7 +375,8 @@ return{
 
 })
 .addCase(OneUserWithPosts.rejected,(state,action:PayloadAction<any>)=>{
-return{
+console.log(action.payload,'error')
+  return{
   ...state, status:false,
   errorMsg:action.payload
 }

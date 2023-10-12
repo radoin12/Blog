@@ -5,8 +5,7 @@ import{CardContent,CardMedia,CardActions,Card,Typography,Button} from "@mui/mate
 import './menu.scss'
 export default function Menu() {
   const info=SelectorApp(postState)
-  console.log(info.post, "post")
-  console.log(info.status, "status menu")
+
   return (
     <div className='Menu'>
       <div className='content'>

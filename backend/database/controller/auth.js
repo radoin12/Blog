@@ -2,7 +2,7 @@
 const bcrypt=require('bcryptjs')
 const db = require('../db.js');
 const Users = require('../model/auth.js');
-const { findByemail } = require('../model/user.js');
+
 const jsonwebtoken=require('jsonwebtoken')
 require('dotenv').config();
 var cookieParser = require('cookie-parser')
@@ -34,7 +34,8 @@ db.query("select * from users where email=?",req.body.email,(err,data)=>{
         message:
           err.message || "Some error occurred while creating the Tutorial."
       });
-    else res.send(data);
+      
+    res.send(data);
   });
    })
 

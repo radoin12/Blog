@@ -23,7 +23,8 @@ const[deletePost,setDeletePost]=useState<Boolean|null>(null)
  const{onePost,status}=postInfo
 
 
-  console.log(status,"status")
+  console.log(onePost,"one post")
+  console.log(id,'id')
 
   const dispatch=DispatchApp()
    useEffect(()=>{
@@ -76,8 +77,8 @@ const[deletePost,setDeletePost]=useState<Boolean|null>(null)
         <h2>{onePost?.title}</h2>
         <p className='desc'>{onePost?.description}</p>
 
-        </>:
-        <p>Post is deleted</p>
+        </>:deletePost!==null?
+        <p>Post is deleted</p>:''
         }
        
        </div>

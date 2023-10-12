@@ -10,11 +10,12 @@ import { ToastContainer } from 'react-toastify';
 
 export default function Home() {
   const CheckAuth=SelectorApp(authState)
-  console.log(CheckAuth.userInfo.id, ' data')
+
   const cat=useLocation().search
 
   const dispatch=DispatchApp()
   const infoPost=SelectorApp(postState)
+  console.log(infoPost.post,'infopost')
   useEffect(() => {
     dispatch(DisplayPost(cat))
   }, [cat]);
@@ -27,7 +28,7 @@ export default function Home() {
           infoPost?.post?.map((item,i)=>
           <div className='post' key={item.id}>
              <div className='img'>
-               <img alt={item?.title} src={item.img!==""? `./uploads/${item?.img}`:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Empty_set.svg/800px-Empty_set.svg.png"} />
+               <img alt={item?.title} src={ `./uploads/${item?.img}`} />
              </div>
              <div className='content'>
              <h2>{item.title}</h2>
