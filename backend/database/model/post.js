@@ -66,6 +66,7 @@ const findByIdPost =  (id, result)=> {
     if (err) {
       result(err,null)  
     }
+    console.log(data[0])
      result(null,data[0])
   
    } )

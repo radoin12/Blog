@@ -6,7 +6,7 @@ const Users = function(User) {
     this.password=User.password
     this.isAdmin=false
     this.image=User.image
-     this.DateUser=new Date()
+   
  
    
   };
@@ -23,7 +23,7 @@ const Users = function(User) {
     
         console.log("created tutorial: ", { id: res.insertId,date:res.date, ...newUser });
         const {password,...others}=newUser
-        result(null, { id: res.insertId,DateUser:new Date(), ...others });
+        result(null, { id: res.insertId, ...others });
       });
   };
   module.exports=Users
