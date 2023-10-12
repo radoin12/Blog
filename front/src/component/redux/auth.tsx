@@ -54,7 +54,7 @@ export const RegisterApp=createAsyncThunk('auth/RegisterApp',async(payloadAuth:u
     } catch (error:any) {
       console.log(error,"error catch")
     
-      return rejectWithValue(error.response.data);
+      return rejectWithValue(error.response);
     }
 })
           // login page
@@ -118,6 +118,7 @@ const authReducer=createSlice({
        })
        .addCase( RegisterApp.rejected,(state,action:any)=>{
         state.status = false;
+        console.log(action.payload)
         state.errorMsg = action.payload;
        })
         // login

@@ -19,7 +19,7 @@ const multer  = require('multer')
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, '../blogmysql/public/uploads')
+      cb(null, '../front/public/uploads')
     },
     filename: function (req, file, cb) {
      
@@ -32,6 +32,7 @@ const storage = multer.diskStorage({
   })
   app.post('/api/upload',upload.single('file'),function(req,res){
     const file=req.file
+    console.log(file)
 
     return res.status(200).send(file?.filename)
   })
@@ -39,6 +40,6 @@ const storage = multer.diskStorage({
 app.use(routePost)
 app.use(routeAuth)
 app.use(routeUser)
-app.listen(process.env.port,()=>{
+app.listen(process.env.port||3001,()=>{
     console.log(process.env.port)
 })
